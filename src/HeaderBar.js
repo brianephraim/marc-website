@@ -1,6 +1,7 @@
 import React from 'react'
+import { View } from 'react-native'
+import Image from './Image';
 import Link from './gatsby-link'
-import { TouchableOpacity, Text, View, Image } from 'react-native'
 import StyleSheet from './StyleSheet';
 
 const styles = StyleSheet.create({

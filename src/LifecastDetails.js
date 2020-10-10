@@ -1,7 +1,8 @@
 import React from 'react'
-import { Text, View, Image } from 'react-native'
+import { Text, View } from 'react-native'
 import StyleSheet from './StyleSheet';
 import Link from './gatsby-link'
+import Image from './Image';
 
 const styles = StyleSheet.create({
   container: {

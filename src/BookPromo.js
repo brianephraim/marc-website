@@ -1,5 +1,7 @@
 import React from 'react'
-import { Text, View, Image } from 'react-native'
+import { Text, View } from 'react-native'
+import Image from './Image';
+
 import StyleSheet from './StyleSheet';
 import Link from './gatsby-link'
 
