@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const HeaderBar = () => (
+const AllBooks = () => (
   <View style={styles.container}>
     {
       [
@@ -164,4 +164,4 @@ const HeaderBar = () => (
   </View>
 )
 
-export default HeaderBar;
+export default AllBooks;

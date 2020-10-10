@@ -92,7 +92,7 @@ const blurbs = [
 Incidentally, you have a dime up your nose. I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Stop! Don't shoot fire stick in space canoe! Cause explosive decompression!`,
 ];
 
-const HeaderBar = () => (
+const LifecastDetails = () => (
   <View style={styles.container}>
     <Text style={styles.h1}>Welcome To Lifecast</Text>
     <View style={styles.hr} />
@@ -135,4 +135,4 @@ const HeaderBar = () => (
   </View>
 )
 
-export default HeaderBar;
+export default LifecastDetails;

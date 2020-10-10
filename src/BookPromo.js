@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const HeaderBar = () => (
+const BookPromo = () => (
   <View style={styles.container}>
     <View style={styles.leftSide}>
       <Text style={styles.h1}>Welcome To Lifecast</Text>
@@ -95,4 +95,4 @@ const HeaderBar = () => (
   </View>
 )
 
-export default HeaderBar;
+export default BookPromo;

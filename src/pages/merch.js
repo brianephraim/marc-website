@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
 })
 
-const Newsletter = () => (
+const Merch = () => (
   <PageLayout>
     <View style={styles.container}>
       <Text style={styles.title}>Merch goes here</Text>
@@ -36,4 +36,4 @@ const Newsletter = () => (
 
 )
 
-export default Newsletter;
+export default Merch;

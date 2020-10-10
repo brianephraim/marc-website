@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
 })
 
-const Newsletter = () => (
+const Contact = () => (
   <PageLayout>
     <View style={styles.container}>
       <Text style={styles.title}>Contact goes here</Text>
@@ -36,4 +36,4 @@ const Newsletter = () => (
 
 )
 
-export default Newsletter;
+export default Contact;

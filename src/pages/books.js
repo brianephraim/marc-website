@@ -7,10 +7,10 @@ import StyleSheet from '../StyleSheet';
 import AllBooks from '../AllBooks';
 
 
-const Home = ({children}) => (
+const Books = ({children}) => (
   <PageLayout>
     <AllBooks />
   </PageLayout>
 )
 
-export default Home;
+export default Books;

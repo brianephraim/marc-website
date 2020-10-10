@@ -3,10 +3,10 @@ import PageLayout from '../PageLayout';
 import LifecastDetails from '../LifecastDetails';
 
 
-const Home = () => (
+const Lifecast = () => (
   <PageLayout>
     <LifecastDetails />
   </PageLayout>
 )
 
-export default Home;
+export default Lifecast;

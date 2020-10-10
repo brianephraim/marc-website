@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
 })
 
-const Newsletter = () => (
+const Press = () => (
   <PageLayout>
     <View style={styles.container}>
       <Text style={styles.title}>Press goes here</Text>
@@ -36,4 +36,4 @@ const Newsletter = () => (
 
 )
 
-export default Newsletter;
+export default Press;
