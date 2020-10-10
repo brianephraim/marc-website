@@ -1,11 +1,11 @@
 import React from 'react'
 import PageLayout from '../PageLayout';
-import BookPromo from '../BookPromo';
+import LifecastDetails from '../LifecastDetails';
 
 
 const Home = () => (
   <PageLayout>
-    <BookPromo />
+    <LifecastDetails />
   </PageLayout>
 )
 

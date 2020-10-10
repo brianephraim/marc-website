@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 const Newsletter = () => (
   <PageLayout>
     <View style={styles.container}>
-      <Text style={styles.title}>Press goes here</Text>
+      <Text style={styles.title}>Merch goes here</Text>
     </View>
   </PageLayout>
 

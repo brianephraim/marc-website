@@ -1,39 +1,39 @@
 import React from 'react'
-import { StyleSheet, TouchableOpacity, Text, View } from 'react-native'
-import styleResolver from 'react-native-web/dist/exports/StyleSheet/styleResolver'
-import Link from '../gatsby-link';
+import { Text, View, Image } from 'react-native'
 import PageLayout from '../PageLayout';
+import StyleSheet from '../StyleSheet';
+import Link from '../gatsby-link'
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'yellow',
+    flexDirection: 'row',
+    maxWidth: 1000,
+    alignItems: 'flex-start',
+    marginVertical: 30,
+    marginHorizontal: 30,
   },
-  link: {
-    fontFamily: 'BodyFont',
-  },
-  bold: {
+  title: {
+    fontFamily: 'HeaderFont',
+    fontSize: 25,
     fontWeight: 'bold',
+    color: '$color3',
+    textAlign:'center',
+    paddingBottom:10,
+    marginTop:20,
+    marginBottom: 6,
+    borderBottomWidth: 1,
+    borderBottomColor: '$color4',
   },
+
 })
 
-
-const LinkItem = ({to, children}) => {
-  return (
-    <Link
-      to={to}
-      style={[styles.link,styles.bold]}
-      // className={styleResolver.resolve([styles.link,styles.bold]).className}
-    >
-      {children}
-    </Link>
-  );
-}
-
-const About = ({children}) => (
+const Newsletter = () => (
   <PageLayout>
-    <LinkItem to="/">asdf</LinkItem>
-    <Text>about</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>About goes here</Text>
+    </View>
   </PageLayout>
+
 )
 
-export default About;
+export default Newsletter;
