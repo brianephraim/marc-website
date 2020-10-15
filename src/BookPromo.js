@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import Image from './Image';
+import LifecastProductImage from './LifecastProductImage';
 
 import StyleSheet from './StyleSheet';
 import Link from './gatsby-link'
@@ -10,17 +11,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     maxWidth: 1000,
     alignItems: 'center',
-    marginVertical: 30,
+    marginVertical: 80,
     marginHorizontal: 30,
   },
   leftSide: {
     flexShrink: 1,
+    marginHorizontal: 20,
   },
   h1: {
     fontFamily: 'HeaderFont',
     fontSize: 50,
     fontWeight: 'bold',
-    color: '$color2',
+    color: '$color5',
     textAlign:'center',
     marginBottom: 20,
   },
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
     fontFamily: 'BodyFont',
     lineHeight:40,
     fontSize: 25,
-    color: '$color3',
+    color: '$color5',
     textAlign:'center',
     marginBottom: 30,
   },
@@ -38,11 +40,9 @@ const styles = StyleSheet.create({
   bookImage: {
     marginHorizontal:20,
     marginTop:20,
-    width: 380,
-    height:610,
   },
   buyNow: {
-    backgroundColor: '$color5',
+    backgroundColor: '$color2',
     color: 'black',
     fontFamily: 'HeaderFont',
     fontSize: 40,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   learnMore: {
-    backgroundColor: '$color5',
+    backgroundColor: '$color2',
     color: 'black',
     fontFamily: 'HeaderFont',
     fontSize: 24,
@@ -63,19 +63,15 @@ const styles = StyleSheet.create({
     textDecorationLine: 'none',
   },
 })
+const textContent = `Extreme urban sprawl has resulted in one massive megalopolis simply called, “The City.” The City’s wealthiest families live in the Highland, above a freezing layer of indigo mist.
+`;
 
 const BookPromo = () => (
   <View style={styles.container}>
     <View style={styles.leftSide}>
       <Text style={styles.h1}>Welcome To Lifecast</Text>
       <Text style={styles.bodyText}>
-        The most best intereseting book thing you could
-        ever imagine
-        {'\u0020'}
-        <Text style={styles.emphasis}>like really wow</Text>
-        {'\u0020'}
-        just you gotta give it a try right now you can't say
-        enough good things about it.
+        {textContent}
       </Text>
       <Link
         to="/books/"
@@ -84,16 +80,17 @@ const BookPromo = () => (
         BUY NOW
       </Link>
       <Link
-        to="/books/"
+        to="/lifecast/"
         style={styles.learnMore}
       >
         LEARN MORE
       </Link>
     </View>
-    <Image
+    <LifecastProductImage
       style={styles.bookImage}
-      source={{uri:'/book.png'}}
+      width={380}
     />
+
   </View>
 )
 

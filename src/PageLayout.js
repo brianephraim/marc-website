@@ -8,25 +8,26 @@ import HeaderBar from './HeaderBar';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '$color4',
+    backgroundColor: '$color6',
     // backgroundColor: 'green',
     flex: 1,
     justifyContent: 'space-between',
+    minWidth: 850, 
   },
   body: {
     alignItems: 'center',
   },
   footer: {
-    backgroundColor:'$color3',
+    backgroundColor:'$color4',
     height:100,
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
     borderTopWidth: 3,
-    borderTopColor: '$color2'
+    borderTopColor: '$color3'
   },
   copyright: {
     margin: 15,
-    color: '$color4',
+    color: '$color5',
     fontFamily: 'BodyFont',
     fontSize: 11,
   },

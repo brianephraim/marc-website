@@ -3,20 +3,23 @@ import { View } from 'react-native'
 import Image from './Image';
 import Link from './gatsby-link'
 import StyleSheet from './StyleSheet';
+import SocialButtons from './SocialButtons';
+
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'flex-end',
     borderBottomWidth: 3,
-    borderBottomColor: '$color5'
+    borderBottomColor: '$color3',
+    backgroundColor: '$color4',
   },
   link: {
-    color: '$color5',
+    color: '$color2',
     fontFamily: 'BodyFont',
-    marginRight: 25,
+    marginRight: 20,
     marginBottom:5,
-    fontSize: 15,
+    fontSize: 18,
     textDecorationLine: 'none',
 
   },
@@ -32,10 +35,10 @@ const styles = StyleSheet.create({
     width: 70,
     height:70,
   },
-  adsf: {
-    height: 30,
-    width: 30,
-    backgroundColor:'red',
+  socialButtons: {
+    position:'absolute',
+    top:10,
+    right: 0,
   }
 
 })
@@ -69,6 +72,11 @@ const HeaderBar = () => (
       <LinkItem to="/contact">Contact</LinkItem>
       <LinkItem to="/merch">Merch</LinkItem>
     </View>
+    <SocialButtons
+      style={styles.socialButtons}
+    />
+
+
   </View>
 )
 

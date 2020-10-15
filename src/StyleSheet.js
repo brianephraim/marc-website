@@ -8,16 +8,17 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 // };
 /* eslint-disable import/no-mutable-exports */
 const colors = {
-  bg1: '#dddddd',
-  // https://lz12v4f1p8c1cumxnbiqvm10-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/pink-green-white-color-scheme-2020.png
-  color1: '#E3E7D3',
-  color2: '#BDC2BF',
-  color3: '#989C94',
-  color4: '#25291C',
-  color5: '#E6E49F',
+  color1: '#FDDBC9',// peach
+  color2: '#50C7E6',// aqua
+  color3: '#CC7DB3',// purple
+  color4: '#1A184F',// dark blue
+  color5: '#FFE58D',// yellow
+  color6: '#0D1315',// black
 
 
 };
+
+export {colors}
 
 const styleVariables = {
   // always call EStyleSheet.build() even if you don't use global variables!

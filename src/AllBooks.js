@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 import Image from './Image';
 import StyleSheet from './StyleSheet';
 import Link from './gatsby-link'
+import LifecastCoverImage from './LifecastCoverImage';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   bookCard: {
-    backgroundColor: '$color1',
+    backgroundColor: '$color5',
     paddingHorizontal: 20,
     paddingVertical: 0,
     width: 300,
@@ -51,14 +52,12 @@ const styles = StyleSheet.create({
   bookImage: {
     marginHorizontal:20,
     marginTop:20,
-    width: 180,
-    height:290,
   },
   buyNow: {
-    backgroundColor: '$color5',
+    backgroundColor: '$color2',
     color: 'black',
     fontFamily: 'HeaderFont',
-    fontSize: 20,
+    fontSize: 29,
     fontWeight: 'bold',
     padding: 10,
     alignSelf: 'center',
@@ -66,10 +65,10 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   learnMore: {
-    backgroundColor: '$color3',
+    backgroundColor: '$color2',
     color: '$color4',
     fontFamily: 'HeaderFont',
-    fontSize: 14,
+    fontSize: 18,
     // fontWeight: 'bold',
     padding: 8,
     alignSelf: 'center',
@@ -100,32 +99,18 @@ const AllBooks = () => (
           outNow: true,
           subtitle: (
             <>
-              Book 1 of the
+              Book 1 of
               {'\u0020'}
-              <Text style={styles.italic}>Lifecast</Text>
-              {'\u0020'}
-              series
+              <Text style={styles.italic}>The Neurogem Saga</Text>
             </>
           ),
-        },
-        {
-          title: 'Lifecast: The Revenge',
-          imageUrl: '/book.png',
-          outNow: false,
-          subtitle: (<>
-            Book 2 of the
-            {'\u0020'}
-            <Text style={styles.italic}>Lifecast</Text>
-            {'\u0020'}
-            series{'\n'}
-          </>),
         },
       ].map(({title,subtitle,buyNowUrl,imageUrl,outNow}) => (
         <View style={styles.column}>
           <View style={styles.bookCard}>
-            <Image
+            <LifecastCoverImage
               style={styles.bookImage}
-              source={{uri:imageUrl}}
+              width={180}
             />
             <Text style={styles.title}>
               {title}
