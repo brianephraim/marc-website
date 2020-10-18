@@ -16,32 +16,32 @@ const styles = StyleSheet.create({
   column: {
     margin: 10,
   },
-  bookCard: {
-    backgroundColor: '$color5',
-    paddingHorizontal: 20,
-    paddingVertical: 0,
-    width: 300,
-    alignItems:'center',
-    borderRadius: 3,
-    marginBottom: 20,
-  },
+  // bookCard: {
+  //   backgroundColor: '$color5',
+  //   paddingHorizontal: 20,
+  //   paddingVertical: 0,
+  //   width: 300,
+  //   alignItems:'center',
+  //   borderRadius: 3,
+  //   marginBottom: 20,
+  // },
   title: {
     fontFamily: 'HeaderFont',
     fontSize: 25,
     fontWeight: 'bold',
-    color: '$color4',
+    color: '$color5',
     textAlign:'center',
     paddingBottom:10,
     marginTop:20,
-    marginBottom: 6,
+    marginBottom: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '$color4',
+    borderBottomColor: '$color5',
   },
   subtitle: {
     fontFamily: 'BodyFont',
     // lineHeight:4,
     fontSize: 16,
-    color: '$color4',
+    color: '$color5',
     textAlign:'center',
     marginBottom: 15,
   },
@@ -94,7 +94,7 @@ const AllBooks = () => (
     {
       [
         {
-          title: 'Welcome to Lifecast',
+          title: 'Lifecast',
           imageUrl: '/book.png',
           outNow: true,
           subtitle: (
@@ -107,18 +107,16 @@ const AllBooks = () => (
         },
       ].map(({title,subtitle,buyNowUrl,imageUrl,outNow}) => (
         <View style={styles.column}>
-          <View style={styles.bookCard}>
-            <LifecastCoverImage
-              style={styles.bookImage}
-              width={180}
-            />
-            <Text style={styles.title}>
-              {title}
-            </Text>
-            <Text style={styles.subtitle}>
-              {subtitle}
-            </Text>
-          </View>
+          <LifecastCoverImage
+            style={styles.bookImage}
+            width={180}
+          />
+          <Text style={styles.title}>
+            {title}
+          </Text>
+          <Text style={styles.subtitle}>
+            {subtitle}
+          </Text>
           {
             outNow ?  (
               <>

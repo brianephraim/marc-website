@@ -35,6 +35,10 @@ body {
 
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ../static/fonts */
 /* bebas-neue-regular - latin */
 @font-face {

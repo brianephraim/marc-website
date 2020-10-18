@@ -67,10 +67,10 @@ const HeaderBar = () => (
       <LinkItem to="/books">Books</LinkItem>
       <LinkItem to="/lifecast">LIFECAST</LinkItem>
       <LinkItem to="/newsletter">Newsletter</LinkItem>
-      <LinkItem to="/press">Press</LinkItem>
+      {/* <LinkItem to="/press">Press</LinkItem> */}
       <LinkItem to="/about">About Me</LinkItem>
       <LinkItem to="/contact">Contact</LinkItem>
-      <LinkItem to="/merch">Merch</LinkItem>
+      {/* <LinkItem to="/merch">Merch</LinkItem> */}
     </View>
     <SocialButtons
       style={styles.socialButtons}
