@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'green',
     flex: 1,
     justifyContent: 'space-between',
-    minWidth: 850, 
+    minWidth: 850,
   },
   body: {
     alignItems: 'center',
@@ -44,7 +44,7 @@ const PageLayout = ({children}) => (
       </View>
     </View>
     <View style={styles.footer}>
-      <Text style={styles.copyright}>©2020 by Marc Opsal</Text>
+      <Text style={styles.copyright}>©2020 Marc Opsal</Text>
     </View>
   </View>
 )

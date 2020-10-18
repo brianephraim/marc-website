@@ -1,5 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import Markdown from 'react-native-markdown-display';
+
 import Image from './Image';
 import LifecastProductImage from './LifecastProductImage';
 
@@ -26,12 +28,7 @@ const styles = StyleSheet.create({
     textAlign:'center',
     marginBottom: 20,
   },
-  bodyText: {
-    fontFamily: 'BodyFont',
-    lineHeight:40,
-    fontSize: 25,
-    color: '$color5',
-    textAlign:'center',
+  bodyTextWrap: {
     marginBottom: 30,
   },
   emphasis: {
@@ -63,16 +60,66 @@ const styles = StyleSheet.create({
     textDecorationLine: 'none',
   },
 })
-const textContent = `Extreme urban sprawl has resulted in one massive megalopolis simply called, “The City.” The City’s wealthiest families live in the Highland, above a freezing layer of indigo mist.
+const textContent = `*BRAVE NEW WORLD*${'\u0020'} meets *FEED*${'\u0020'} in this thrilling adventure that pits one man against a pleasure-obsessed society that threatens to take everything from him.
 `;
-
+/* eslint-disable react-native/no-unused-styles */
+const markdownStyles = StyleSheet.create({
+  text: {
+    fontFamily: 'BodyFont',
+    lineHeight:40,
+    fontSize: 25,
+    color: '$color5',
+    textAlign:'center',
+    marginBottom: 30,
+  },
+  textgroup: {textAlign:'center'},
+  // body: {color: 'red', fontSize: 10},
+  // body
+  // heading1
+  // heading2
+  // heading3
+  // heading4
+  // heading5
+  // heading6
+  // hr
+  // strong
+  // em
+  // s
+  // blockquote
+  // bullet_list
+  // ordered_list
+  // list_item
+  // code_inline
+  // code_block
+  // fence
+  // table
+  // thead
+  // tbody
+	// th
+  // tr
+  // td
+  // link
+  // blocklink
+	// image
+  // text
+  // textgroup
+  // paragraph
+  // hardbreak
+  // softbreak
+  // pre
+  // inline
+  // span
+});
+/* eslint-enable react-native/no-unused-styles */
 const BookPromo = () => (
   <View style={styles.container}>
     <View style={styles.leftSide}>
       <Text style={styles.h1}>Welcome To Lifecast</Text>
-      <Text style={styles.bodyText}>
-        {textContent}
-      </Text>
+      <View style={styles.bodyTextWrap}>
+        <Markdown style={markdownStyles}>
+          {textContent}
+        </Markdown>
+      </View>
       <Link
         to="/books/"
         style={styles.buyNow}

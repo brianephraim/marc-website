@@ -6,23 +6,32 @@ import Link from '../gatsby-link'
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    // flexDirection: 'row',
     maxWidth: 1000,
-    alignItems: 'flex-start',
+    // alignItems: 'flex-start',
     marginVertical: 30,
     marginHorizontal: 30,
   },
-  title: {
+
+  h1: {
     fontFamily: 'HeaderFont',
-    fontSize: 25,
-    fontWeight: 'bold',
-    color: '$color3',
+    fontSize: 50,
+    // fontWeight: 'bold',
+    color: '$color5',
     textAlign:'center',
-    paddingBottom:10,
-    marginTop:20,
     marginBottom: 6,
-    borderBottomWidth: 1,
-    borderBottomColor: '$color4',
+    marginTop: 30,
+  },
+  bodyText: {
+    fontFamily: 'BodyFont',
+    fontSize: 18,
+    // fontWeight: 'bold',
+    color: '$color5',
+    textAlign:'center',
+    marginBottom: 6,
+    marginTop: 30,
+    maxWidth: 400,
+    lineHeight:30,
   },
 
 })
@@ -30,7 +39,10 @@ const styles = StyleSheet.create({
 const About = () => (
   <PageLayout>
     <View style={styles.container}>
-      <Text style={styles.title}>About goes here</Text>
+      <Text style={styles.h1}>About Me</Text>
+      <Text style={styles.bodyText}>
+        {`MARC OPSAL is a native of Spokane, WA and graduated from Western Washington University. He currently lives in Pasadena, CA with his family.`}
+      </Text>
     </View>
   </PageLayout>
 

@@ -65,7 +65,7 @@ const HeaderBar = () => (
     <View style={styles.linkCollection}>
       <LinkItem to="/">Home</LinkItem>
       <LinkItem to="/books">Books</LinkItem>
-      <LinkItem to="/lifecast">Lifecast</LinkItem>
+      <LinkItem to="/lifecast">LIFECAST</LinkItem>
       <LinkItem to="/newsletter">Newsletter</LinkItem>
       <LinkItem to="/press">Press</LinkItem>
       <LinkItem to="/about">About Me</LinkItem>

@@ -61,18 +61,21 @@ const config = [
 ];
 
 const socialIconsComponents = config.map(({Icon,props,url}) => {
-  return ({style,...rest}) => {
-    return (
-      <View style={style}>
-        <a href={url} target="_blank" style={{display:'block'}}>
-          <Icon
-            {...props}
-            {...rest}
-          />
-        </a>
-      </View>
-    );
-  };
+  return {
+    key: url,
+    Comp: ({style,...rest}) => {
+      return (
+        <View style={style}>
+          <a href={url} target="_blank" style={{display:'block'}}>
+            <Icon
+              {...props}
+              {...rest}
+            />
+          </a>
+        </View>
+      );
+    },
+  }
 });
 const [Facebook,Twitter,Instagram,Tumblr] = socialIconsComponents;
 export {Facebook,Twitter,Instagram,Tumblr};
@@ -81,8 +84,9 @@ export {Facebook,Twitter,Instagram,Tumblr};
 const SocialButtons = ({style}) => (
   <View style={[styles.container,style]}>
     {
-      socialIconsComponents.map(Comp => (
+      socialIconsComponents.map(({Comp,key}) => (
         <Comp
+          key={key}
           style={styles.iconItem}
         />
       ))

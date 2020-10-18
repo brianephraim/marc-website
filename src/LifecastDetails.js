@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // marginVertical: 30,
     // marginHorizontal: 30,
-    backgroundColor: "$color5",
+    // backgroundColor: "$color5",
     alignSelf:'stretch',
     paddingBottom:30,
   },
@@ -20,14 +20,14 @@ const styles = StyleSheet.create({
     fontFamily: 'HeaderFont',
     fontSize: 50,
     // fontWeight: 'bold',
-    color: '$color4',
+    color: '$color5',
     textAlign:'center',
     marginBottom: 6,
     marginTop: 30,
   },
   hr: {
 
-    backgroundColor: '$color4',
+    backgroundColor: '$color5',
     width: 100,
     height:4,
   },
@@ -35,11 +35,13 @@ const styles = StyleSheet.create({
     fontSize:25,
     marginTop:15,
     fontFamily: 'BodyFont',
+    color: '$color5',
   },
   genre: {
     marginTop:10,
     fontSize:18,
     fontFamily: 'BodyFont',
+    color: '$color5',
   },
   columns: {
     marginTop:30,
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     fontFamily: 'BodyFont',
     lineHeight:30,
     fontSize: 22,
-    color: '$color4',
+    color: '$color5',
     textAlign:'center',
     marginBottom: 30,
   },
@@ -85,6 +87,9 @@ const styles = StyleSheet.create({
     borderWidth:4,
     borderColor:'$color4',
   },
+  italic: {
+    fontStyle: 'italic'
+  },
 })
 
 const blurbs = [
@@ -109,18 +114,16 @@ In the fight to save themselves, Bear and Aleks must join forces with dangerous 
 
 const LifecastDetails = () => (
   <View style={styles.container}>
-    <Text style={styles.h1}>Welcome To Lifecast</Text>
+    <Text style={styles.h1}>LIFECAST</Text>
     <View style={styles.hr} />
     <Text style={styles.subtitle}>
       Book 1 of the
       {'\u0020'}
-      <Text style={styles.italic}>Lifecast</Text>
-      {'\u0020'}
-      series{'\n'}
+      <Text style={styles.italic}>The Neurogem Saga</Text>
     </Text>
-    <Text style={styles.genre}>
+    {/* <Text style={styles.genre}>
       GENRE: Science Fiction
-    </Text>
+    </Text> */}
     <View style={styles.columns}>
       <View style={styles.columnText}>
         {
