@@ -126,6 +126,12 @@ const LifecastDetails = () => (
       GENRE: Science Fiction
     </Text> */}
     <View style={styles.columns}>
+      <View style={styles.column}>
+        <LifecastBookImage
+          style={styles.bookImage}
+          width={380}
+        />
+      </View>
       <View style={styles.columnText}>
         {
           blurbs.map(text => (
@@ -142,12 +148,6 @@ const LifecastDetails = () => (
             BUY NOW
           </Text>
         </Link> */}
-      </View>
-      <View style={styles.column}>
-        <LifecastBookImage
-          style={styles.bookImage}
-          width={380}
-        />
       </View>
     </View>
 
