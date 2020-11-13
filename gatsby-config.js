@@ -7,5 +7,8 @@ module.exports = {
   // pathPrefix: "/marc-website",
   pathPrefix: "",
   /* Your site config here */
-  plugins: ["gatsby-plugin-react-native-web"],
+  plugins: [
+    "gatsby-plugin-react-native-web",
+    "gatsby-plugin-react-helmet"
+  ],
 }

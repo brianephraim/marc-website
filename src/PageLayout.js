@@ -1,7 +1,9 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import { Helmet } from "react-helmet"
 import StyleSheet from './StyleSheet'
 import HeaderBar from './HeaderBar';
+import HtmlHead from './HtmlHead';
 
 
 
@@ -37,6 +39,7 @@ const styles = StyleSheet.create({
 
 const PageLayout = ({children}) => (
   <View style={styles.container}>
+    <HtmlHead />
     <View style={styles.notFooter}>
       <HeaderBar />
       <View style={styles.body}>
