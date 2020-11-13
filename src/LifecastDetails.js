@@ -133,14 +133,14 @@ const LifecastDetails = () => (
             </Text>
           ))
         }
-        <Link
+        {/* <Link
           to="/books/"
           style={styles.buyNowWrap}
         >
           <Text style={styles.buyNow}>
             BUY NOW
           </Text>
-        </Link>
+        </Link> */}
       </View>
       <View style={styles.column}>
         <LifecastCoverImage

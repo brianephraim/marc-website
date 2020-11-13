@@ -5,7 +5,7 @@ import Link from './gatsby-link'
 import StyleSheet from './StyleSheet';
 import SocialButtons from './SocialButtons';
 
-
+const logoHeight = 50;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     color: '$color2',
     fontFamily: 'BodyFont',
     marginRight: 20,
-    marginBottom:5,
+    marginBottom:8,
     fontSize: 18,
     textDecorationLine: 'none',
 
@@ -30,15 +30,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   face: {
-    marginHorizontal:20,
+    marginHorizontal:40,
     marginTop:20,
-    width: 70,
-    height:70,
+    width: (1239/206) * logoHeight,
+    height: logoHeight,
+    // height:(1239/206) * 70,
+
   },
   socialButtons: {
     position:'absolute',
-    top:10,
-    right: 0,
+    top:20,
+    right: 20,
   }
 
 })
@@ -60,16 +62,16 @@ const HeaderBar = () => (
   <View style={styles.container}>
     <Image
       style={styles.face}
-      source={{uri:'/face_small.png'}}
+      source={{uri:'/marc-logo.png'}}
     />
     <View style={styles.linkCollection}>
       <LinkItem to="/">Home</LinkItem>
-      <LinkItem to="/books">Books</LinkItem>
+      {/* <LinkItem to="/books">Books</LinkItem> */}
       <LinkItem to="/lifecast">LIFECAST</LinkItem>
       <LinkItem to="/newsletter">Newsletter</LinkItem>
       {/* <LinkItem to="/press">Press</LinkItem> */}
       <LinkItem to="/about">About Me</LinkItem>
-      <LinkItem to="/contact">Contact</LinkItem>
+      {/* <LinkItem to="/contact">Contact</LinkItem> */}
       {/* <LinkItem to="/merch">Merch</LinkItem> */}
     </View>
     <SocialButtons

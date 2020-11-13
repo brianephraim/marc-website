@@ -120,12 +120,12 @@ const AllBooks = () => (
           {
             outNow ?  (
               <>
-                <Link
+                {/* <Link
                   to='/books/'
                   style={styles.buyNow}
                 >
                   BUY NOW
-                </Link>
+                </Link> */}
                 <Link
                   to="/lifecast/"
                   style={styles.learnMore}
