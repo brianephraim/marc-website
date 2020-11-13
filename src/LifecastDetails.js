@@ -3,7 +3,8 @@ import { Text, View } from 'react-native'
 import StyleSheet from './StyleSheet';
 import Link from './gatsby-link'
 import Image from './Image';
-import LifecastCoverImage from './LifecastCoverImage';
+// import LifecastCoverImage from './LifecastCoverImage';
+import LifecastBookImage from './LifecastBookImage';
 
 const styles = StyleSheet.create({
   container: {
@@ -143,7 +144,7 @@ const LifecastDetails = () => (
         </Link> */}
       </View>
       <View style={styles.column}>
-        <LifecastCoverImage
+        <LifecastBookImage
           style={styles.bookImage}
           width={380}
         />
