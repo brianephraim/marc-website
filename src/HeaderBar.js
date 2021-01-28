@@ -70,7 +70,7 @@ const HeaderBar = () => (
       <LinkItem to="/lifecast">LIFECAST</LinkItem>
       <LinkItem to="/newsletter">Newsletter</LinkItem>
       {/* <LinkItem to="/press">Press</LinkItem> */}
-      <LinkItem to="/about">About Me</LinkItem>
+      <LinkItem to="/about">About Marc</LinkItem>
       {/* <LinkItem to="/contact">Contact</LinkItem> */}
       {/* <LinkItem to="/merch">Merch</LinkItem> */}
     </View>

@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 import PageLayout from '../PageLayout';
 import StyleSheet from '../StyleSheet';
 import Link from '../gatsby-link'
+import MarcPortraitImage from '../MarcPortraitImage';
 
 const styles = StyleSheet.create({
   container: {
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     // fontWeight: 'bold',
     color: '$color5',
     textAlign:'center',
-    marginBottom: 6,
+    marginBottom: 16,
     marginTop: 30,
     maxWidth: 400,
     lineHeight:30,
@@ -39,10 +40,11 @@ const styles = StyleSheet.create({
 const About = () => (
   <PageLayout>
     <View style={styles.container}>
-      <Text style={styles.h1}>About Me</Text>
+      <Text style={styles.h1}>About Marc</Text>
       <Text style={styles.bodyText}>
         {`MARC OPSAL is a native of Spokane, WA and graduated from Western Washington University. He currently lives in Pasadena, CA with his family.`}
       </Text>
+      <MarcPortraitImage width={400} />
     </View>
   </PageLayout>
 
