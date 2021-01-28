@@ -83,7 +83,7 @@
   },
   "scripts": {
     "build2": "gatsby build",
-    "build": "gatsby build --prefix-paths && cp CNAME public/",
+    "build": "gatsby build --no-uglify --prefix-paths && cp CNAME public/",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
