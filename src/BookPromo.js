@@ -31,24 +31,24 @@ const styles = StyleSheet.create({
   bodyTextWrap: {
     marginBottom: 30,
   },
-  emphasis: {
-    color: '$color1',
-  },
+  // emphasis: {
+  //   color: '$color1',
+  // },
   bookImage: {
     marginHorizontal:20,
     marginTop:20,
   },
-  buyNow: {
-    backgroundColor: '$color2',
-    color: 'black',
-    fontFamily: 'HeaderFont',
-    fontSize: 40,
-    fontWeight: 'bold',
-    padding: 20,
-    alignSelf: 'center',
-    textDecorationLine: 'none',
-    marginBottom: 15,
-  },
+  // buyNow: {
+  //   backgroundColor: '$color2',
+  //   color: 'black',
+  //   fontFamily: 'HeaderFont',
+  //   fontSize: 40,
+  //   fontWeight: 'bold',
+  //   padding: 20,
+  //   alignSelf: 'center',
+  //   textDecorationLine: 'none',
+  //   marginBottom: 15,
+  // },
   learnMore: {
     backgroundColor: '$color2',
     color: 'black',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
 })
 const textContent = `*BRAVE NEW WORLD*${'\u0020'} meets *FEED*${'\u0020'} in this thrilling adventure that pits one man against a pleasure-obsessed society that threatens to take everything from him.
 `;
-/* eslint-disable react-native/no-unused-styles */
+/* eslint-disable */
 const markdownStyles = StyleSheet.create({
   text: {
     fontFamily: 'BodyFont',
@@ -110,7 +110,7 @@ const markdownStyles = StyleSheet.create({
   // inline
   // span
 });
-/* eslint-enable react-native/no-unused-styles */
+/* eslint-enable */
 const BookPromo = () => (
   <View style={styles.container}>
     <View style={styles.leftSide}>

@@ -6,7 +6,6 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 //   //   variationB: 'SFProText-Regular',
 //   // },
 // };
-/* eslint-disable import/no-mutable-exports */
 const colors = {
   color1: '#FDDBC9',// peach
   color2: '#50C7E6',// aqua
@@ -18,7 +17,7 @@ const colors = {
 
 };
 
-export {colors}
+
 
 const styleVariables = {
   // always call EStyleSheet.build() even if you don't use global variables!
@@ -46,6 +45,10 @@ function styleify(someStyle) {
   return toReturn;
 }
 
+/* eslint-disable */
 export { styleify };
+export {colors}
 console.log('EStyleSheet',EStyleSheet);
+
 export default EStyleSheet;
+/* eslint-enable */
