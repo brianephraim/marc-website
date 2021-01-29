@@ -60,7 +60,7 @@ const htmlForm = `
 <!--End mc_embed_signup-->
 `
 const dangerouslySetInnerHTMLValue = { __html: htmlForm };
-const Newsletter = () => (
+const Newsletter = () => null && (
   <PageLayout>
     <View style={styles.container}>
       <Text style={styles.title}>JOIN THE MAILING LIST</Text>

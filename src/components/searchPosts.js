@@ -8,7 +8,7 @@ import Link from '../gatsby-link'
 
 const styles = StyleSheet.create({
   posts: {
-    backgroundColor: 'black',
+    // backgroundColor: 'black',
   },
   postHeader: {
     color: '$color2',
@@ -49,6 +49,7 @@ const SearchBar = styled.div`
   height: 3rem;
   background: #fdfdfd;
   margin-bottom: 40px;
+  margin-top: 30px;
 
   svg {
     margin: auto 1rem;

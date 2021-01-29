@@ -13,9 +13,7 @@ import Link from '../gatsby-link'
 
 
 const styles = StyleSheet.create({
-  posts: {
-    backgroundColor: 'black',
-  },
+
   title: {
     color: '$color2',
     fontFamily: 'HeaderFont',
@@ -53,20 +51,6 @@ const styles = StyleSheet.create({
     fontFamily: 'BodyFont',
     fontSize: 19,
     color: '$color4',
-  },
-  excerpt: {
-    fontFamily: 'BodyFont',
-    fontSize: 18,
-    color: '$color1',
-    textAlign:'left',
-    marginBottom: 60,
-  },
-  errorMessage: {
-    fontFamily: 'BodyFont',
-    fontSize: 18,
-    color: '$color1',
-    textAlign:'center',
-    marginBottom: 60,
   },
 });
 
