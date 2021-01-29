@@ -1,10 +1,74 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { Text, View } from 'react-native'
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import StyleSheet from '../StyleSheet';
+
+import PageLayout from '../PageLayout';
+import Link from '../gatsby-link'
+
+
+const styles = StyleSheet.create({
+  posts: {
+    backgroundColor: 'black',
+  },
+  title: {
+    color: '$color2',
+    fontFamily: 'HeaderFont',
+    fontSize: 40,
+    fontWeight: 'bold',
+    alignSelf: 'left',
+    textDecorationLine: 'none',
+    marginTop:40,
+  },
+  timestamp: {
+    fontFamily: 'BodyFont',
+    fontSize: 14,
+    color: '$color3',
+    textAlign:'left',
+    marginBottom: 30,
+  },
+
+  blogContentWrap: {
+    backgroundColor:'#fff',
+    padding: 30,
+    borderRadius: 5,
+    marginBottom: 30,
+    width: '100%',
+    maxWidth: 768,
+  },
+  nextPrevLinks: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignSelf: 'stretch',
+    marginTop: 80,
+    // marginBottom: 30,
+
+  },
+  nextPrevLinkItem: {
+    fontFamily: 'BodyFont',
+    fontSize: 19,
+    color: '$color4',
+  },
+  excerpt: {
+    fontFamily: 'BodyFont',
+    fontSize: 18,
+    color: '$color1',
+    textAlign:'left',
+    marginBottom: 60,
+  },
+  errorMessage: {
+    fontFamily: 'BodyFont',
+    fontSize: 18,
+    color: '$color1',
+    textAlign:'center',
+    marginBottom: 60,
+  },
+});
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -13,51 +77,42 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <PageLayout>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            display: `block`,
-          }}
-        >
+        <Text style={styles.title}>{post.frontmatter.title}</Text>
+        <Text style={styles.timestamp}>
           {post.frontmatter.date}
-        </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-          }}
-        />
-        <Bio />
+        </Text>
+        <View style={styles.blogContentWrap}>
+          <MDXRenderer>{post.body}</MDXRenderer>
+          <View
+            style={styles.nextPrevLinks}
+          >
+            {
+              previous
+              ? (
+                <Link to={`/blog${previous.fields.slug}`} rel="prev" style={styles.nextPrevLinkItem}>
+                  ← {previous.frontmatter.title}
+                </Link>
+              )
+              : (<View />)
+            }
+            {
+              next
+              ? (
+                <Link to={`/blog${next.fields.slug}`} rel="next" style={styles.nextPrevLinkItem}>
+                  {next.frontmatter.title} →
+                </Link>
+              )
+              : (<View />)
+            }
+          </View>
+        </View>
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={`/blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`/blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </Layout>
+      </PageLayout>
     )
   }
 }
