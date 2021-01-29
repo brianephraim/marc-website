@@ -26,9 +26,9 @@ function SEO({ description, lang, meta, keywords, title }) {
   // )
   const site = {
     siteMetadata: {
-      description: 'site description',
-      title: 'site title',
-      author: 'site author;'
+      description: `Author of Lifecast, Marc Opsal`,
+      title: 'Marc Opsal',
+      author: 'Marc Opsal'
     }
 
   };
