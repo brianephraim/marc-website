@@ -118,51 +118,63 @@ const styles = StyleSheet.create({
 })
 
 const email = 'goldshifpublishing@gmail.com'
+// const Contact = () => null;
 class Contact extends Component{
-  state = {};
-  flickerCopiedMessage = () => {
-    this.setState({copied: true});
-    this.timeout = setTimeout(() => this.setState({copied: false}), 2000);
-  };
-  componentWillUnmount(){
-    !!this.timeout && clearTimeout(this.timeout);
-  }
-  render(){
-    return (
-      <PageLayout>
-        <View style={styles.container}>
-          <Text style={styles.h1}>Contact</Text>
-          <Text style={styles.h2}>Have a professional inquiry?</Text>
-          <View style={styles.emailStuff}>
-            <Text style={styles.h3}>Email to get in touch:</Text>
-            <View style={styles.emailMainRow}>
-              <View style={styles.borderRow}>
-                <Text
-                  style={styles.email}
-                  accessibilityRole='link'
-                  href={`mailto:${email}`}
-                  target="_blank"
-                >
-                  {email}
-                </Text>
-                <CopyToClipboard text={email}
-                  onCopy={this.flickerCopiedMessage}
-                >
-                  <Text style={styles.copyButtonText}>Copy to clipboard</Text>
-                </CopyToClipboard>
-              </View>
-              <Text style={[styles.copied,!this.state.copied && styles.hidden]}>copied!</Text>
-            </View>
-            <Text style={styles.h3}>or use this form:</Text>
-          </View>
 
-          <View style={styles.formContainer}>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSRfsaTxMQYdxBk5bot0yYYdy3GSIcIZj3wEpX1JdyGDPJEg/viewform?embedded=true" width="640" height="700" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
-          </View>
-        </View>
-      </PageLayout>
-    );
+  // state = {};
+  constructor(){
+    super();
   }
+  // asdf = () => {};
+  // state = {};
+  render(){
+    return null;
+  }
+  // }
+//   flickerCopiedMessage = () => {
+//     this.setState({copied: true});
+//     this.timeout = setTimeout(() => this.setState({copied: false}), 2000);
+//   };
+//   componentWillUnmount(){
+//     !!this.timeout && clearTimeout(this.timeout);
+//   }
+//   render(){
+//     return (
+//       <PageLayout>
+//         <View style={styles.container}>
+//           <Text style={styles.h1}>Contact</Text>
+//           <Text style={styles.h2}>Have a professional inquiry?</Text>
+//           <View style={styles.emailStuff}>
+//             <Text style={styles.h3}>Email to get in touch:</Text>
+//             <View style={styles.emailMainRow}>
+//               <View style={styles.borderRow}>
+//                 <Text
+//                   style={styles.email}
+//                   accessibilityRole='link'
+//                   href={`mailto:${email}`}
+//                   target="_blank"
+//                 >
+//                   {email}
+//                 </Text>
+//                 <CopyToClipboard text={email}
+//                   onCopy={this.flickerCopiedMessage}
+//                 >
+//                   <Text style={styles.copyButtonText}>Copy to clipboard</Text>
+//                 </CopyToClipboard>
+//               </View>
+//               <Text style={[styles.copied,!this.state.copied && styles.hidden]}>copied!</Text>
+//             </View>
+//             <Text style={styles.h3}>or use this form:</Text>
+//           </View>
+//
+//           <View style={styles.formContainer}>
+//             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSRfsaTxMQYdxBk5bot0yYYdy3GSIcIZj3wEpX1JdyGDPJEg/viewform?embedded=true" width="640" height="700" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+//           </View>
+//         </View>
+//       </PageLayout>
+//     );
+//   }
+
 }
 
 export default Contact;
