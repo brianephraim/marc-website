@@ -1,9 +1,45 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { useFlexSearch } from "react-use-flexsearch"
 import * as queryString from "query-string"
+import { Text, View } from 'react-native'
+import StyleSheet from '../StyleSheet';
+import Link from '../gatsby-link'
 
+const styles = StyleSheet.create({
+  posts: {
+    backgroundColor: 'black',
+  },
+  postHeader: {
+    color: '$color2',
+    fontFamily: 'HeaderFont',
+    fontSize: 24,
+    fontWeight: 'bold',
+    alignSelf: 'left',
+    textDecorationLine: 'none',
+  },
+  timestamp: {
+    fontFamily: 'BodyFont',
+    fontSize: 14,
+    color: '$color3',
+    textAlign:'left',
+    marginBottom: 10,
+  },
+  excerpt: {
+    fontFamily: 'BodyFont',
+    fontSize: 18,
+    color: '$color1',
+    textAlign:'left',
+    marginBottom: 60,
+  },
+  errorMessage: {
+    fontFamily: 'BodyFont',
+    fontSize: 18,
+    color: '$color1',
+    textAlign:'center',
+    marginBottom: 60,
+  },
+});
 
 const SearchBar = styled.div`
   display: flex;
@@ -12,6 +48,7 @@ const SearchBar = styled.div`
   width: 100%;
   height: 3rem;
   background: #fdfdfd;
+  margin-bottom: 40px;
 
   svg {
     margin: auto 1rem;
@@ -39,68 +76,59 @@ const SearchBar = styled.div`
   }
 `
 
+const PostItem = ({title,linkTo,timestamp,excerpt}) => (
+  <View>
+    <Link to={linkTo} style={styles.postHeader}>
+      {title}
+    </Link>
+    <Text style={styles.timestamp}>{timestamp}</Text>
+    <Text style={styles.excerpt}>{excerpt}</Text>
+  </View>
+);
+
 const SearchedPosts = ({ results }) =>
   results.length > 0 ? (
     results.map(node => {
-      const date = node.date
-      const title = node.title || node.slug
-      const description = node.description
-      const excerpt = node.excerpt
-      const slug = node.slug
-
+      const {date,title,slug,description,excerpt} = node;
       return (
-        <div key={slug}>
-          <h3
-            style={{
-              marginBottom: 20,
-            }}
-          >
-            <Link style={{ boxShadow: `none` }} to={`/blog${slug}`}>
-              {title}
-            </Link>
-          </h3>
-          <small>{date}</small>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: description || excerpt,
-            }}
-          />
-        </div>
-      )
+        <PostItem
+          node={node}
+          key={slug}
+          title={title || slug}
+          linkTo={`/blog${slug}`}
+          timestamp={date}
+          excerpt={description || excerpt}
+        />
+      );
     })
   ) : (
-    <p style={{ textAlign: "center" }}>
+    <Text style={styles.errorMessage}>
       Sorry, couldn't find any posts matching this search.
-    </p>
+    </Text>
   )
 
 const AllPosts = ({ posts }) => (
-  <div style={{ margin: "20px 0 40px" }}>
-    {posts.map(({ node }) => {
-      const title = node.frontmatter.title || node.fields.slug
-      return (
-        <div key={node.fields.slug}>
-          <h3
-            style={{
-              marginBottom: 20,
-            }}
-          >
-            <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
-              {title}
-            </Link>
-          </h3>
-          <small>{node.frontmatter.date}</small>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: node.frontmatter.description || node.excerpt,
-            }}
-          />
-        </div>
-      )
-    })}
-  </div>
+  posts.map(({ node }) => {
+    return (
+      <PostItem
+        node={node}
+        key={node.fields.slug}
+        title={node.frontmatter.title || node.fields.slug}
+        linkTo={`/blog${node.fields.slug}`}
+        timestamp={node.frontmatter.date}
+        excerpt={node.frontmatter.description || node.excerpt}
+      />
+    )
+  })
 )
 
+/*
+<div
+  dangerouslySetInnerHTML={{
+    __html: node.frontmatter.description || node.excerpt,
+  }}
+/>
+*/
 const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
   const { search } = queryString.parse(location.search)
   const [query, setQuery] = useState(search || "")
@@ -134,7 +162,9 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
           }}
         />
       </SearchBar>
-      {query ? <SearchedPosts results={results} /> : <AllPosts posts={posts} />}
+      <View style={styles.posts}>
+        {query ? <SearchedPosts results={results} /> : <AllPosts posts={posts} />}
+      </View>
     </>
   )
 }

@@ -1,11 +1,19 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
-import Layout from "../components/layout"
+import { graphql } from "gatsby"
+import { View } from 'react-native'
+import PageLayout from '../PageLayout';
 import SEO from "../components/seo"
-import Button from "../components/button"
 import SearchPosts from "../components/searchPosts"
+import StyleSheet from '../StyleSheet';
+
+const styles = StyleSheet.create({
+  container: {
+    maxWidth: 768,
+    alignSelf: 'center',
+    width: '100%',
+    borderWidth: 20,
+  },
+});
 
 class Blog extends React.Component {
   render() {
@@ -15,19 +23,17 @@ class Blog extends React.Component {
     const localSearchBlog = data.localSearchBlog
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <SearchPosts
-          posts={posts}
-          localSearchBlog={localSearchBlog}
-          navigate={navigate}
-          location={location}
-        />
-        <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
-        </Link>
-      </Layout>
+      <PageLayout>
+        <View style={styles.container}>
+          <SEO title="All posts" />
+          <SearchPosts
+            posts={posts}
+            localSearchBlog={localSearchBlog}
+            navigate={navigate}
+            location={location}
+          />
+        </View>
+      </PageLayout>
     )
   }
 }
