@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     maxWidth: 768,
     alignSelf: 'center',
     width: '100%',
+    marginHorizontal: 20,
     // borderWidth: 20,
   },
 });

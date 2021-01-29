@@ -1,19 +1,42 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import StyleSheet from './StyleSheet';
-import Link from './gatsby-link'
-import Image from './Image';
+import { useMediaQuery } from 'react-native-media-query';
 // import LifecastCoverImage from './LifecastCoverImage';
 import LifecastBookImage from './LifecastBookImage';
 
-const styles = StyleSheet.create({
+const mediaStyles = {
+
+  columns: {
+    marginTop:30,
+    marginHorizontal:30,
+    maxWidth:1000,
+    flexDirection: 'row',
+    '@media (max-width: 800px)': {
+      flexDirection: 'column-reverse',
+      alignItems: 'center',
+    },
+  },
+  bookImage: {
+    marginHorizontal:20,
+    marginTop:20,
+    '@media (max-width: 500px)': {
+      display: 'none',
+    },
+  },
+  bookImageSmaller: {
+    marginHorizontal:20,
+    marginTop:20,
+    display: 'none',
+    '@media (max-width: 500px)': {
+      display: 'block',
+    },
+  },
+};
+
+const basicStyles = StyleSheet.create({
   container: {
-    // flexDirection: 'row',
-    // maxWidth: 1000,
     alignItems: 'center',
-    // marginVertical: 30,
-    // marginHorizontal: 30,
-    // backgroundColor: "$color5",
     alignSelf:'stretch',
     paddingBottom:30,
   },
@@ -44,17 +67,12 @@ const styles = StyleSheet.create({
     fontFamily: 'BodyFont',
     color: '$color5',
   },
-  columns: {
-    marginTop:30,
-    marginHorizontal:30,
-    maxWidth:1000,
-    flexDirection: 'row',
-  },
+
   columnText: {
     flexShrink: 1,
   },
   column: {
-    marginHorizontal:20,
+    marginHorizontal:40,
   },
 
   blurb: {
@@ -65,12 +83,7 @@ const styles = StyleSheet.create({
     textAlign:'center',
     marginBottom: 30,
   },
-  bookImage: {
-    marginHorizontal:20,
-    marginTop:20,
-    // width: 380,
-    // height:610,
-  },
+
   buyNowWrap: {
     marginBottom: 15,
     textDecorationLine: 'none',
@@ -113,45 +126,54 @@ Until now, Bear has kept Aleks at a distance for fear his love might put them bo
 In the fight to save themselves, Bear and Aleks must join forces with dangerous allies, face off against a foe who wields unimaginable power, and make the impossible choice between desire and survival. `,
 ];
 
-const LifecastDetails = () => (
-  <View style={styles.container}>
-    <Text style={styles.h1}>LIFECAST</Text>
-    <View style={styles.hr} />
-    <Text style={styles.subtitle}>
-      Book 1 of the
-      {'\u0020'}
-      <Text style={styles.italic}>The Neurogem Saga</Text>
-    </Text>
-    {/* <Text style={styles.genre}>
-      GENRE: Science Fiction
-    </Text> */}
-    <View style={styles.columns}>
-      <View style={styles.column}>
-        <LifecastBookImage
-          style={styles.bookImage}
-          width={380}
-        />
-      </View>
-      <View style={styles.columnText}>
-        {
-          blurbs.map(text => (
-            <Text style={styles.blurb}>
-              {text}
+const LifecastDetails = () => {
+  const [styleIds, styles] = useMediaQuery(mediaStyles);
+  return (
+    <View style={basicStyles.container}>
+      <Text style={basicStyles.h1}>LIFECAST</Text>
+      <View style={basicStyles.hr} />
+      <Text style={basicStyles.subtitle}>
+        Book 1 of the
+        {'\u0020'}
+        <Text style={basicStyles.italic}>The Neurogem Saga</Text>
+      </Text>
+      {/* <Text style={basicStyles.genre}>
+        GENRE: Science Fiction
+      </Text> */}
+      <View style={styles.columns} dataSet={{ media: styleIds.columns }}>
+        <View style={basicStyles.column}>
+          <LifecastBookImage
+            style={basicStyles.bookImage}
+            dataSet={{ media: styleIds.bookImage }}
+            width={380}
+          />
+          <LifecastBookImage
+            style={styles.bookImageSmaller}
+            dataSet={{ media: styleIds.bookImageSmaller }}
+            width={280}
+          />
+        </View>
+        <View style={basicStyles.columnText}>
+          {
+            blurbs.map(text => (
+              <Text style={basicStyles.blurb} key={text}>
+                {text}
+              </Text>
+            ))
+          }
+          {/* <Link
+            to="/books/"
+            style={basicStyles.buyNowWrap}
+          >
+            <Text style={basicStyles.buyNow}>
+              BUY NOW
             </Text>
-          ))
-        }
-        {/* <Link
-          to="/books/"
-          style={styles.buyNowWrap}
-        >
-          <Text style={styles.buyNow}>
-            BUY NOW
-          </Text>
-        </Link> */}
+          </Link> */}
+        </View>
       </View>
-    </View>
 
-  </View>
-)
+    </View>
+  )
+};
 
 export default LifecastDetails;

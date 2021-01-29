@@ -1,25 +1,48 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import Markdown from 'react-native-markdown-display';
-
+import { useMediaQuery } from 'react-native-media-query';
 import Image from './Image';
 import LifecastProductImage from './LifecastProductImage';
 
 import StyleSheet from './StyleSheet';
 import Link from './gatsby-link'
 
-const styles = StyleSheet.create({
+const mediaStyles = {
   container: {
     flexDirection: 'row',
     maxWidth: 1000,
     alignItems: 'center',
     marginVertical: 80,
     marginHorizontal: 30,
+    '@media (max-width: 800px)': {
+        flexDirection: 'column-reverse',
+    },
   },
   leftSide: {
     flexShrink: 1,
     marginHorizontal: 20,
+    marginTop: 50,
   },
+  bookImage: {
+    marginHorizontal:20,
+    marginTop:20,
+    '@media (max-width: 500px)': {
+      display: 'none',
+    },
+  },
+  bookImageSmaller: {
+    marginHorizontal:20,
+    marginTop:20,
+    display: 'none',
+    '@media (max-width: 500px)': {
+      display: 'block',
+    },
+  },
+};
+
+const basicStyles = StyleSheet.create({
+
   h1: {
     fontFamily: 'HeaderFont',
     fontSize: 50,
@@ -34,10 +57,7 @@ const styles = StyleSheet.create({
   // emphasis: {
   //   color: '$color1',
   // },
-  bookImage: {
-    marginHorizontal:20,
-    marginTop:20,
-  },
+
   // buyNow: {
   //   backgroundColor: '$color2',
   //   color: 'black',
@@ -111,34 +131,44 @@ const markdownStyles = StyleSheet.create({
   // span
 });
 /* eslint-enable */
-const BookPromo = () => (
-  <View style={styles.container}>
-    <View style={styles.leftSide}>
-      <Text style={styles.h1}>Welcome To Lifecast</Text>
-      <View style={styles.bodyTextWrap}>
-        <Markdown style={markdownStyles}>
-          {textContent}
-        </Markdown>
+const BookPromo = () => {
+  const [styleIds, styles] = useMediaQuery(mediaStyles);
+  return (
+    <View style={styles.container} dataSet={{ media: styleIds.container }}>
+      <View style={styles.leftSide} dataSet={{ media: styleIds.leftSide }}>
+        <Text style={basicStyles.h1}>Welcome To Lifecast</Text>
+        <View style={basicStyles.bodyTextWrap}>
+          <Markdown style={markdownStyles}>
+            {textContent}
+          </Markdown>
+        </View>
+        {/* <Link
+          to="/books/"
+          style={styles.buyNow}
+        >
+          BUY NOW
+        </Link> */}
+        <Link
+          to="/lifecast/"
+          style={basicStyles.learnMore}
+        >
+          LEARN MORE
+        </Link>
       </View>
-      {/* <Link
-        to="/books/"
-        style={styles.buyNow}
-      >
-        BUY NOW
-      </Link> */}
-      <Link
-        to="/lifecast/"
-        style={styles.learnMore}
-      >
-        LEARN MORE
-      </Link>
-    </View>
-    <LifecastProductImage
-      style={styles.bookImage}
-      width={380}
-    />
+      <LifecastProductImage
+        style={styles.bookImage}
+        width={380}
+        dataSet={{ media: styleIds.bookImage }}
+      />
+      <LifecastProductImage
+        style={styles.bookImageSmaller}
+        dataSet={{ media: styleIds.bookImageSmaller }}
+        width={280}
+      />
 
-  </View>
-)
+
+    </View>
+  )
+};
 
 export default BookPromo;

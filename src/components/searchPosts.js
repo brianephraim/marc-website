@@ -7,6 +7,9 @@ import StyleSheet from '../StyleSheet';
 import Link from '../gatsby-link'
 
 const styles = StyleSheet.create({
+  container: {
+    marginHorizontal: 20,
+  },
   posts: {
     // backgroundColor: 'black',
   },
@@ -141,7 +144,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
   )
 
   return (
-    <>
+    <View style={styles.container}>
       <SearchBar>
         <svg
           focusable="false"
@@ -166,7 +169,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
       <View style={styles.posts}>
         {query ? <SearchedPosts results={results} /> : <AllPosts posts={posts} />}
       </View>
-    </>
+    </View>
   )
 }
 

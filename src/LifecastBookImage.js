@@ -6,11 +6,12 @@ import Image from './Image';
 // const aspectRatio = 2107/1378;
 const aspectRatio = 1593/1179;
 
-const LifecastBookImage = ({style, width}) => {
+const LifecastBookImage = ({style, width, dataSet}) => {
   return (
     <Image
       style={[{width, height: width * aspectRatio},style]}
       source={{uri:'/lifecast-book.png'}}
+      dataSet={dataSet}
     />
   );
 };

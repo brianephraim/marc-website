@@ -1,12 +1,33 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import { useMediaQuery } from 'react-native-media-query';
 import PageLayout from '../PageLayout';
 import StyleSheet from '../StyleSheet';
 import Link from '../gatsby-link'
 import MarcPortraitImage from '../MarcPortraitImage';
 
+import Image from '../Image';
 import Markdown from 'react-native-markdown-display';
 
+
+const aspectRatio = 1786/1427;
+
+
+const mediaStyles = {
+
+  marcImage: {
+    '@media (max-width: 500px)': {
+      display: 'none',
+    },
+  },
+  marcImageSmaller: {
+
+    display: 'none',
+    '@media (max-width: 500px)': {
+      display: 'block',
+    },
+  },
+}
 /* eslint-disable */
 const markdownStyles = StyleSheet.create({
   // text: {
@@ -67,13 +88,14 @@ const markdownStyles = StyleSheet.create({
 });
 /* eslint-enable */
 
-const styles = StyleSheet.create({
+const basicStyles = StyleSheet.create({
   container: {
     // flexDirection: 'row',
     maxWidth: 1000,
     // alignItems: 'flex-start',
     marginVertical: 30,
     marginHorizontal: 30,
+    alignItems: 'center',
   },
 
   h1: {
@@ -96,19 +118,31 @@ const markdownContent = `MARC OPSAL was born and raised in the Pacific Northwest
 
 Marc loves to hike with his family, bike around town, and create cocktails with whatever ingredients are available. For updates on Marc’s writing, follow him on Twitter [@MarcOpsal](https://www.twitter.com).`
 
-const About = () => (
-  <PageLayout>
-    <View style={styles.container}>
-      <Text style={styles.h1}>About Marc</Text>
-      <View style={styles.markdownWrap}>
-        <Markdown style={markdownStyles}>
-          {markdownContent}
-        </Markdown>
+const About = () => {
+  const [styleIds, styles] = useMediaQuery(mediaStyles);
+  return (
+    <PageLayout>
+      <View style={basicStyles.container}>
+        <Text style={basicStyles.h1}>About Marc</Text>
+        <View style={basicStyles.markdownWrap}>
+          <Markdown style={markdownStyles}>
+            {markdownContent}
+          </Markdown>
+        </View>
+        <Image
+          style={[{width: 400, height: 400 * aspectRatio},styles.marcImage]}
+          dataSet={{ media: styleIds.marcImage }}
+          source={{uri:'/marc-portrait.jpg'}}
+        />
+        <Image
+          style={[{width: 300, height: 300 * aspectRatio},styles.marcImageSmaller]}
+          dataSet={{ media: styleIds.marcImageSmaller }}
+          source={{uri:'/marc-portrait.jpg'}}
+        />
       </View>
-      <MarcPortraitImage width={400} />
-    </View>
-  </PageLayout>
+    </PageLayout>
 
-)
+  );
+}
 
 export default About;

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'green',
     flex: 1,
     justifyContent: 'space-between',
-    minWidth: 850,
+    // minWidth: 850,
   },
   body: {
     alignItems: 'center',

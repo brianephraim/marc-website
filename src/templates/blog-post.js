@@ -13,7 +13,11 @@ import Link from '../gatsby-link'
 
 
 const styles = StyleSheet.create({
-
+  container: {
+    marginHorizontal: 20,
+    alignItems: 'center',
+    alignSelf: 'stretch',
+  },
   title: {
     color: '$color2',
     fontFamily: 'HeaderFont',
@@ -62,37 +66,39 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <PageLayout>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
-        <Text style={styles.title}>{post.frontmatter.title}</Text>
-        <Text style={styles.timestamp}>
-          {post.frontmatter.date}
-        </Text>
-        <View style={styles.blogContentWrap}>
-          <MDXRenderer>{post.body}</MDXRenderer>
-          <View
-            style={styles.nextPrevLinks}
-          >
-            {
-              previous
-              ? (
-                <Link to={`/blog${previous.fields.slug}`} rel="prev" style={styles.nextPrevLinkItem}>
-                  ← {previous.frontmatter.title}
-                </Link>
-              )
-              : (<View />)
-            }
-            {
-              next
-              ? (
-                <Link to={`/blog${next.fields.slug}`} rel="next" style={styles.nextPrevLinkItem}>
-                  {next.frontmatter.title} →
-                </Link>
-              )
-              : (<View />)
-            }
+        <View style={styles.container}>
+          <SEO
+            title={post.frontmatter.title}
+            description={post.frontmatter.description || post.excerpt}
+          />
+          <Text style={styles.title}>{post.frontmatter.title}</Text>
+          <Text style={styles.timestamp}>
+            {post.frontmatter.date}
+          </Text>
+          <View style={styles.blogContentWrap}>
+            <MDXRenderer>{post.body}</MDXRenderer>
+            <View
+              style={styles.nextPrevLinks}
+            >
+              {
+                previous
+                ? (
+                  <Link to={`/blog${previous.fields.slug}`} rel="prev" style={styles.nextPrevLinkItem}>
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )
+                : (<View />)
+              }
+              {
+                next
+                ? (
+                  <Link to={`/blog${next.fields.slug}`} rel="next" style={styles.nextPrevLinkItem}>
+                    {next.frontmatter.title} →
+                  </Link>
+                )
+                : (<View />)
+              }
+            </View>
           </View>
         </View>
 
