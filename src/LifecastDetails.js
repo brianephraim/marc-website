@@ -29,7 +29,14 @@ const mediaStyles = {
     marginTop:20,
     display: 'none',
     '@media (max-width: 500px)': {
+      marginHorizontal:0,
       display: 'block',
+    },
+  },
+  column: {
+    marginHorizontal:40,
+    '@media (max-width: 500px)': {
+      marginHorizontal:15,
     },
   },
 };
@@ -141,7 +148,7 @@ const LifecastDetails = () => {
         GENRE: Science Fiction
       </Text> */}
       <View style={styles.columns} dataSet={{ media: styleIds.columns }}>
-        <View style={basicStyles.column}>
+        <View style={styles.column} dataSet={{ media: styleIds.column }}>
           <LifecastBookImage
             style={basicStyles.bookImage}
             dataSet={{ media: styleIds.bookImage }}
@@ -150,7 +157,7 @@ const LifecastDetails = () => {
           <LifecastBookImage
             style={styles.bookImageSmaller}
             dataSet={{ media: styleIds.bookImageSmaller }}
-            width={280}
+            width={180}
           />
         </View>
         <View style={basicStyles.columnText}>
