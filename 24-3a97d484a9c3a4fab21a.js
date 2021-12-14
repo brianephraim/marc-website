@@ -1,0 +1,18 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[24],{
+
+/***/ "KoSn":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("q1tI");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _PageLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("5zSb");
+/* harmony import */ var _StyleSheet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("D5zv");
+/* harmony import */ var _gatsby_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("lnzl");
+var styles=_StyleSheet__WEBPACK_IMPORTED_MODULE_2__[/* default */ "b"].create({container:{maxWidth:1000,alignItems:'flex-start',marginVertical:30,marginHorizontal:30},title:{fontFamily:'HeaderFont',fontSize:25,fontWeight:'bold',color:'$color5',textAlign:'center',paddingBottom:10,marginTop:20,marginBottom:6,borderBottomWidth:1,borderBottomColor:'$color4'},formContainer:{width:600}});var htmlForm="\n<!-- Begin Mailchimp Signup Form -->\n<link href=\"//cdn-images.mailchimp.com/embedcode/classic-10_7.css\" rel=\"stylesheet\" type=\"text/css\">\n<style type=\"text/css\">\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\n</style>\n<div id=\"mc_embed_signup\">\n<form action=\"https://goldshif.us2.list-manage.com/subscribe/post?u=711f64f13a4f2b1558a21ce82&amp;id=5520a51d18\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\n    <div id=\"mc_embed_signup_scroll\">\n\n<div class=\"indicates-required\"><span class=\"asterisk\">*</span> indicates required</div>\n<div class=\"mc-field-group\">\n\t<label for=\"mce-EMAIL\">Email Address  <span class=\"asterisk\">*</span>\n</label>\n\t<input type=\"email\" value=\"\" name=\"EMAIL\" class=\"required email\" id=\"mce-EMAIL\">\n</div>\n\t<div id=\"mce-responses\" class=\"clear\">\n\t\t<div class=\"response\" id=\"mce-error-response\" style=\"display:none\"></div>\n\t\t<div class=\"response\" id=\"mce-success-response\" style=\"display:none\"></div>\n\t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n    <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_711f64f13a4f2b1558a21ce82_5520a51d18\" tabindex=\"-1\" value=\"\"></div>\n    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n    </div>\n</form>\n</div>\n<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\n<!--End mc_embed_signup-->\n";var dangerouslySetInnerHTMLValue={__html:htmlForm};var Newsletter=function Newsletter(){return null&&false;};/* harmony default export */ __webpack_exports__["default"] = (Newsletter);
+
+/***/ })
+
+}]);
+//# sourceMappingURL=24-3a97d484a9c3a4fab21a.js.map
