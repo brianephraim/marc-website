@@ -114,9 +114,9 @@ const basicStyles = StyleSheet.create({
   },
 
 })
-const markdownContent = `MARC OPSAL was born and raised in the Pacific Northwest. After graduating from Western Washington University, he moved to New York City to work in the book publishing industry. Eventually, he relocated to Pasadena, CA with his wife.
+const markdownContent = `MARC OPSAL was born and raised in the Inland Northwest. After graduating from Western Washington University, he moved to New York City to work in the book publishing industry. Eventually, he relocated to Pasadena, CA with his wife.
 
-Marc loves to hike with his family, bike around town, and create cocktails with whatever ingredients are available. For updates on Marc’s writing, follow him on Twitter [@MarcOpsal](https://www.twitter.com).`
+Marc loves to hike with his family, bike around town, and create cocktails with whatever ingredients are available. For updates on Marc’s writing, follow him on Instagram [@MarcOpsal](https://www.instagram.com/marcopsal/).`
 
 const About = () => {
   const [styleIds, styles] = useMediaQuery(mediaStyles);
