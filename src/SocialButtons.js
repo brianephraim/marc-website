@@ -49,15 +49,15 @@ const config = [
     },
     url: 'https://www.instagram.com/marcopsal'
   },
-  {
-    Icon: TumblrIcon,
-    props: {
-      height: size,
-      width: size,
-      fill: colors.color2,
-    },
-    url: 'https://marcopsal.tumblr.com/'
-  },
+  // {
+  //   Icon: TumblrIcon,
+  //   props: {
+  //     height: size,
+  //     width: size,
+  //     fill: colors.color2,
+  //   },
+  //   url: 'https://marcopsal.tumblr.com/'
+  // },
 ];
 
 const socialIconsComponents = config.map(({Icon,props,url}) => {
