@@ -5,13 +5,6 @@ import StyleSheet from '../StyleSheet';
 import Link from '../gatsby-link'
 
 const styles = StyleSheet.create({
-  container: {
-    // flexDirection: 'row',
-    maxWidth: 1000,
-    alignItems: 'flex-start',
-    marginVertical: 30,
-    marginHorizontal: 30,
-  },
   title: {
     fontFamily: 'HeaderFont',
     fontSize: 25,
@@ -24,8 +17,28 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '$color4',
   },
+  container: {
+    // flexDirection: 'row',
+    maxWidth: 1000,
+    // alignItems: 'flex-start',
+    marginVertical: 30,
+    marginHorizontal: 30,
+    alignSelf:'stretch',
+    alignItems:'center',
+
+  },
+
+  formContainerOuter: {
+    // backgroundColor:'red',
+    width: '100%',
+    // justifyContent:'center',
+    alignItems:"center",
+
+  },
   formContainer: {
-    width: 600,
+    maxWidth: 600,
+    width:'100%'
+
   },
 
 })
@@ -67,10 +80,12 @@ const Newsletter = () => (
   <PageLayout>
     <View style={styles.container}>
       <Text style={styles.title}>JOIN THE MAILING LIST</Text>
-      <View
-        style={styles.formContainer}
-      >
-        <div dangerouslySetInnerHTML={dangerouslySetInnerHTMLValue} />
+      <View style={styles.formContainerOuter}>
+        <View
+          style={styles.formContainer}
+        >
+          <div dangerouslySetInnerHTML={dangerouslySetInnerHTMLValue} />
+        </View>
       </View>
     </View>
   </PageLayout>
