@@ -58,17 +58,17 @@ const basicStyles = StyleSheet.create({
   //   color: '$color1',
   // },
 
-  // buyNow: {
-  //   backgroundColor: '$color2',
-  //   color: 'black',
-  //   fontFamily: 'HeaderFont',
-  //   fontSize: 40,
-  //   fontWeight: 'bold',
-  //   padding: 20,
-  //   alignSelf: 'center',
-  //   textDecorationLine: 'none',
-  //   marginBottom: 15,
-  // },
+  buyNow: {
+    backgroundColor: '$color2',
+    color: 'black',
+    fontFamily: 'HeaderFont',
+    fontSize: 40,
+    fontWeight: 'bold',
+    padding: 20,
+    alignSelf: 'center',
+    textDecorationLine: 'none',
+    marginBottom: 15,
+  },
   learnMore: {
     backgroundColor: '$color2',
     color: 'black',
@@ -78,6 +78,7 @@ const basicStyles = StyleSheet.create({
     padding: 10,
     alignSelf: 'center',
     textDecorationLine: 'none',
+    marginBottom: 15,
   },
 })
 const textContent = `*BRAVE NEW WORLD*${'\u0020'} meets *FEED*${'\u0020'} in this thrilling adventure that pits one man against a pleasure-obsessed society that threatens to take everything from him.
@@ -142,17 +143,18 @@ const BookPromo = () => {
             {textContent}
           </Markdown>
         </View>
-        {/* <Link
-          to="/books/"
-          style={styles.buyNow}
-        >
-          BUY NOW
-        </Link> */}
         <Link
           to="/lifecast/"
           style={basicStyles.learnMore}
         >
           LEARN MORE
+        </Link>
+        <Link
+          href="https://www.amazon.com/dp/B09QH1VPRW?ref_=pe_3052080_276849420"
+          target="_blank"
+          style={basicStyles.buyNow}
+        >
+          Pre-Order Now
         </Link>
       </View>
       <LifecastProductImage

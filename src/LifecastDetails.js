@@ -4,6 +4,7 @@ import StyleSheet from './StyleSheet';
 import { useMediaQuery } from 'react-native-media-query';
 // import LifecastCoverImage from './LifecastCoverImage';
 import LifecastBookImage from './LifecastBookImage';
+import Link from './gatsby-link'
 
 const mediaStyles = {
 
@@ -38,6 +39,7 @@ const mediaStyles = {
     '@media (max-width: 500px)': {
       marginHorizontal:15,
     },
+    alignItems:'center',
   },
 };
 
@@ -80,6 +82,7 @@ const basicStyles = StyleSheet.create({
   },
   column: {
     marginHorizontal:40,
+    alignItems:'center',
   },
 
   blurb: {
@@ -88,7 +91,7 @@ const basicStyles = StyleSheet.create({
     fontSize: 22,
     color: '$color5',
     textAlign:'center',
-    marginBottom: 30,
+    marginBottom: 50,
   },
 
   buyNowWrap: {
@@ -107,6 +110,8 @@ const basicStyles = StyleSheet.create({
     display:'flex',
     borderWidth:4,
     borderColor:'$color4',
+    alignSelf:'center',
+    marginTop:25,
   },
   italic: {
     fontStyle: 'italic'
@@ -159,6 +164,13 @@ const LifecastDetails = () => {
             dataSet={{ media: styleIds.bookImageSmaller }}
             width={180}
           />
+          <Link
+            href="https://www.amazon.com/dp/B09QH1VPRW?ref_=pe_3052080_276849420"
+            target="_blank"
+            style={basicStyles.buyNow}
+          >
+            Pre-Order Now
+          </Link>
         </View>
         <View style={basicStyles.columnText}>
           {
@@ -168,6 +180,15 @@ const LifecastDetails = () => {
               </Text>
             ))
           }
+          {/*
+            <Link
+              href="https://www.amazon.com/dp/B09QH1VPRW?ref_=pe_3052080_276849420"
+              target="_blank"
+              style={basicStyles.buyNow}
+            >
+              Pre-Order Now
+            </Link>
+          */}
           {/* <Link
             to="/books/"
             style={basicStyles.buyNowWrap}
