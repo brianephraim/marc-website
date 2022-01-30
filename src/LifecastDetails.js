@@ -216,7 +216,7 @@ const LifecastDetails = () => {
 
       </View>
       <View style={[styles.widgetWrap,{width:'100%',flexDirection:'column',}]} >
-        <Text style={basicStyles.h2}>READ THE FIRST CHAPTER</Text>
+        <Text style={basicStyles.h2}>READ THE FIRST THREE CHAPTERS</Text>
         <BookPreview />
 
 

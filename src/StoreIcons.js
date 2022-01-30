@@ -40,6 +40,8 @@ const LifecastCoverImage = ({style, width}) => {
       flexDirection: 'row',
       marginTop: 40,
       flexWrap: 'wrap',
+      alignItems:'center',
+      justifyContent:'center',
     }}>
       {
         bookStores.map(({name,url}) => {

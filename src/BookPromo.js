@@ -4,6 +4,7 @@ import Markdown from 'react-native-markdown-display';
 import { useMediaQuery } from 'react-native-media-query';
 import Image from './Image';
 import LifecastProductImage from './LifecastProductImage';
+import StoreIcons from './StoreIcons';
 
 import StyleSheet from './StyleSheet';
 import Link from './gatsby-link'
@@ -156,6 +157,7 @@ const BookPromo = () => {
         >
           Pre-Order Now
         </Link>
+        <StoreIcons />
       </View>
       <LifecastProductImage
         style={styles.bookImage}
