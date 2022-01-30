@@ -6,7 +6,7 @@ import PageLayout from '../PageLayout';
 import StyleSheet from '../StyleSheet';
 import AllBooks from '../AllBooks';
 
-import LifecastDetails from './LifecastDetails';
+import LifecastPage from './lifecast';
 
 //
 // const Books = ({children}) => (
@@ -15,4 +15,4 @@ import LifecastDetails from './LifecastDetails';
 //   </PageLayout>
 // )
 
-export default LifecastDetails;
+export default LifecastPage;
