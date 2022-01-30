@@ -4,7 +4,9 @@ import StyleSheet from './StyleSheet';
 import { useMediaQuery } from 'react-native-media-query';
 // import LifecastCoverImage from './LifecastCoverImage';
 import LifecastBookImage from './LifecastBookImage';
-import Link from './gatsby-link'
+import Link from './gatsby-link';
+import StoreIcons from './StoreIcons';
+import BookPreview from './BookPreview';
 
 const mediaStyles = {
 
@@ -17,6 +19,12 @@ const mediaStyles = {
       flexDirection: 'column-reverse',
       alignItems: 'center',
     },
+  },
+  widgetWrap: {
+    marginTop:30,
+    marginHorizontal:30,
+    maxWidth:1000,
+    flexDirection: 'column',
   },
   bookImage: {
     marginHorizontal:20,
@@ -56,6 +64,15 @@ const basicStyles = StyleSheet.create({
     color: '$color5',
     textAlign:'center',
     marginBottom: 6,
+    marginTop: 30,
+  },
+  h2: {
+    fontFamily: 'HeaderFont',
+    fontSize: 40,
+    // fontWeight: 'bold',
+    color: '$color5',
+    textAlign:'center',
+    marginBottom: 16,
     marginTop: 30,
   },
   hr: {
@@ -120,13 +137,9 @@ const basicStyles = StyleSheet.create({
 
 const blurbs = [
   `Welcome to LifeCast.
-
 There is no government...
-
 There is no law…
-
 There is no choice...
-
 There is only the Idol.
 
 Extreme urban sprawl has resulted in one massive megalopolis simply called, “The City.” The City’s wealthiest families live in the Highland, above a freezing layer of indigo mist.
@@ -165,12 +178,13 @@ const LifecastDetails = () => {
             width={180}
           />
           <Link
-            href="https://www.amazon.com/dp/B09QH1VPRW?ref_=pe_3052080_276849420"
+            to="https://www.amazon.com/dp/B09QH1VPRW?ref_=pe_3052080_276849420"
             target="_blank"
             style={basicStyles.buyNow}
           >
             Pre-Order Now
           </Link>
+          <StoreIcons />
         </View>
         <View style={basicStyles.columnText}>
           {
@@ -180,6 +194,7 @@ const LifecastDetails = () => {
               </Text>
             ))
           }
+
           {/*
             <Link
               href="https://www.amazon.com/dp/B09QH1VPRW?ref_=pe_3052080_276849420"
@@ -198,6 +213,13 @@ const LifecastDetails = () => {
             </Text>
           </Link> */}
         </View>
+
+      </View>
+      <View style={[styles.widgetWrap,{width:'100%',flexDirection:'column',}]} >
+        <Text style={basicStyles.h2}>READ THE FIRST CHAPTER</Text>
+        <BookPreview />
+
+
       </View>
 
     </View>
