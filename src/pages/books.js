@@ -6,11 +6,13 @@ import PageLayout from '../PageLayout';
 import StyleSheet from '../StyleSheet';
 import AllBooks from '../AllBooks';
 
+import LifecastDetails from './LifecastDetails';
 
-const Books = ({children}) => (
-  <PageLayout>
-    <AllBooks />
-  </PageLayout>
-)
+//
+// const Books = ({children}) => (
+//   <PageLayout>
+//     <AllBooks />
+//   </PageLayout>
+// )
 
-export default Books;
+export default LifecastDetails;
