@@ -35,7 +35,6 @@ const bookStores = [
 ];
 
 const LifecastCoverImage = ({style, width}) => {
-  console.log(`/store-icons/${name}.png`);
   return (
     <View style={{
       flexDirection: 'row',
