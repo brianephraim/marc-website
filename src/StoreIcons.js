@@ -9,28 +9,32 @@ const aspectRatio = 2107/1378;
  */
 const bookStores = [
   {
-    name:'bn',
+    name:'bn.jpeg',
     url: 'https://www.barnesandnoble.com/w/lifecast-marc-opsal/1140897287?ean=9781735549514',
   },
   {
-    name:'bd',
-    url: 'https://www.bookdepository.com/Lifecast-Opsal-Marc-Opsal/9781735549514?ref=grid-view&qid=1643304780107&sr=1-1',
-  },
-  {
-    name:'indigo',
+    name:'indigo.jpeg',
     url: 'https://www.chapters.indigo.ca/en-ca/books/lifecast/9781735549507-item.html?ikwid=lifecast&ikwsec=Home&ikwidx=7#algoliaQueryId=e5186b4a5f1301f8c7f6cb0cdd1373e9',
   },
   {
-    name:'kobo',
+    name:'kobo.jpeg',
     url: 'https://www.kobo.com/us/en/ebook/lifecast',
   },
   {
-    name:'amazon',
+    name:'amazon.jpeg',
     url: 'https://www.amazon.com/dp/B09QH1VPRW?ref_=pe_3052080_276849420',
   },
   {
-    name:'apple',
+    name:'apple.jpeg',
     url: 'http://books.apple.com/us/book/id1605067701',
+  },
+  {
+    name:'google.png',
+    url: 'https://play.google.com/store/books/details/Marc_Opsal_LIFECAST?id=_uALEAAAQBAJ',
+  },
+  {
+    name:'indie.jpeg',
+    url: 'https://www.indiebound.org/book/9781735549514',
   },
 ];
 
@@ -54,7 +58,7 @@ const LifecastCoverImage = ({style, width}) => {
             >
               <Image
                 style={[{width:55, height: 55, margin: 10,}]}
-                source={{uri:`/store-icons/${name}.jpeg`}}
+                source={{uri:`/store-icons/${name}`}}
               />
             </Link>
           );
