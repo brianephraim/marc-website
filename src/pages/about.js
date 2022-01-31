@@ -118,7 +118,7 @@ const markdownContent = `MARC OPSAL was born and raised in the Inland Northwest.
 
 Marc loves to hike with his family, bike around town, and create cocktails with whatever ingredients are available.
 
-For updates on Marc’s writing, be sure to subscribe to his newsletter and follow [@MarcOpsal](https://www.instagram.com/marcopsal/) on Instagram.`;
+For updates on Marc’s writing, be sure to [subscribe\u00a0to\u00a0his\u00a0newsletter](/newsletter) and follow [@MarcOpsal](https://www.instagram.com/marcopsal/) on Instagram.`;
 
 const About = () => {
   const [styleIds, styles] = useMediaQuery(mediaStyles);
