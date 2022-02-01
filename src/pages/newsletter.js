@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
     // alignItems: 'flex-start',
     marginVertical: 30,
     marginHorizontal: 30,
-    alignSelf:'stretch',
+    // alignSelf:'stretch',
+    width: '100%',
     alignItems:'center',
 
   },
