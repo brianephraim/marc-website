@@ -182,7 +182,7 @@ const LifecastDetails = () => {
             target="_blank"
             style={basicStyles.buyNow}
           >
-            Pre-Order Now
+            Buy Now
           </Link>
           <StoreIcons />
         </View>
@@ -201,7 +201,7 @@ const LifecastDetails = () => {
               target="_blank"
               style={basicStyles.buyNow}
             >
-              Pre-Order Now
+              Buy Now
             </Link>
           */}
           {/* <Link

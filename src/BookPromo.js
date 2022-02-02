@@ -155,7 +155,7 @@ const BookPromo = () => {
           target="_blank"
           style={basicStyles.buyNow}
         >
-          Pre-Order Now
+          Buy Now
         </Link>
         <StoreIcons />
       </View>
