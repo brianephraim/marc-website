@@ -95,6 +95,7 @@ const HeaderBar = () => {
           <LinkItem to="/">Home</LinkItem>
           {/* <LinkItem to="/books">Books</LinkItem> */}
           <LinkItem to="/lifecast">LIFECAST</LinkItem>
+          <LinkItem to="/reviews">Reviews</LinkItem>
           <LinkItem to="/newsletter">Newsletter</LinkItem>
           {/* <LinkItem to="/press">Press</LinkItem> */}
           <LinkItem to="/about">About Marc</LinkItem>
