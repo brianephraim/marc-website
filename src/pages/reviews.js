@@ -156,7 +156,7 @@ const reviewData = [
   {
     name:`Midwest Book Review`,
     content:`Having an immense attraction for readers with an interest in dystopian themed novels, "Lifecast" by author Marc Opsal is a simply compelling page turner of a read from cover to cover. Original, entertaining, populated with memorable characters and more plot twists than a carnival roller coaster, "Lifecast" is a deftly crafted novel -- the kind from which blockbuster movies are made!"`,
-    url:`http://www.midwestbookreview.com/sbw/may_22.htm`,
+    url:`http://www.midwestbookreview.com/sbw/may_22.htm#generalfiction`,
   },
   {
     name:`Words and Other Malarky`,
@@ -168,8 +168,13 @@ const reviewData = [
     content:`Opsal creates a hellscape of class warfare, in which the internet of things has become the internet of people, and no one's soul is safe from getting hacked. LifeCast warns us of the brutal, often grotesque results of massive wealth inequality, and how it can render all of us something less than human. But there's no cynicism here; throughout the story, Opsal weaves evidence of our indestructible will to find humor, to be alive, and to find love in the darkness.`,
     url:null,
   },
+  {
+    name: 'Breakeven Books',
+    youtube: 'https://www.youtube.com/embed/w9GU9UP-aYw?start=411',
+    url: 'https://www.youtube.com/watch?v=w9GU9UP-aYw&t=411',
+  },
 ];
-  
+  // <iframe width="560" height="315" src="https://www.youtube.com/embed/w9GU9UP-aYw?start=411" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 const Reviews = () => {
   const [styleIds, styles] = useMediaQuery(mediaStyles);
@@ -178,12 +183,30 @@ const Reviews = () => {
       <View style={basicStyles.container}>
         <Text style={basicStyles.h1}>Reviews</Text>
         {
-          reviewData.map(({name,content,url}) => {
+          reviewData.map(({name,content,url,youtube}) => {
             return (
               <View style={basicStyles.review}>
-                <Text style={basicStyles.p}>
-                  {content}
-                </Text>
+                {
+                  youtube && (
+                    <iframe
+                      style={{alignSelf:'center',maxWidth:'100%',marginBottom:30,}}
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/w9GU9UP-aYw?start=411"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  )
+                }
+                {
+                  content && (
+                    <Text style={basicStyles.p}>
+                      {`"${content}"`}
+                    </Text>
+                  )
+                }
                 {
                   !!url && (
                     <Link
