@@ -155,7 +155,7 @@ const reviewData = [
   },
   {
     name:`Midwest Book Review`,
-    content:`Having an immense attraction for readers with an interest in dystopian themed novels, "Lifecast" by author Marc Opsal is a simply compelling page turner of a read from cover to cover. Original, entertaining, populated with memorable characters and more plot twists than a carnival roller coaster, "Lifecast" is a deftly crafted novel -- the kind from which blockbuster movies are made!"`,
+    content:`Having an immense attraction for readers with an interest in dystopian themed novels, "Lifecast" by author Marc Opsal is a simply compelling page turner of a read from cover to cover. Original, entertaining, populated with memorable characters and more plot twists than a carnival roller coaster, "Lifecast" is a deftly crafted novel -- the kind from which blockbuster movies are made!`,
     url:`http://www.midwestbookreview.com/sbw/may_22.htm#generalfiction`,
   },
   {
