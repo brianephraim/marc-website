@@ -155,7 +155,7 @@ const reviewData = [
   },
   {
     name:`The Booklife Prize`,
-    content:`"[LIFECAST] offers stellar worldbuilding and a chilling set of believable circumstances and an admirable social critique that resists becoming heavy-handed. The story is well-crafted with meticulous attention paid to intricate details and vivid imagery placed throughout. [LIFECAST] invites readers to think differently about consumer culture; the storytelling is both immersive and frightening in its familiarity.`,
+    content:`[LIFECAST] offers stellar worldbuilding and a chilling set of believable circumstances and an admirable social critique that resists becoming heavy-handed. The story is well-crafted with meticulous attention paid to intricate details and vivid imagery placed throughout. [LIFECAST] invites readers to think differently about consumer culture; the storytelling is both immersive and frightening in its familiarity.`,
     url:null,
   },
   {
