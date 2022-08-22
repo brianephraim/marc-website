@@ -154,6 +154,11 @@ const reviewData = [
     url:`https://www.kirkusreviews.com/book-reviews/marc-opsal/lifecast-the-neurogem-saga/`,
   },
   {
+    name:`The Booklife Prize`,
+    content:`"[LIFECAST] offers stellar worldbuilding and a chilling set of believable circumstances and an admirable social critique that resists becoming heavy-handed. The story is well-crafted with meticulous attention paid to intricate details and vivid imagery placed throughout. [LIFECAST] invites readers to think differently about consumer culture; the storytelling is both immersive and frightening in its familiarity.`,
+    url:null,
+  },
+  {
     name:`Midwest Book Review`,
     content:`Having an immense attraction for readers with an interest in dystopian themed novels, "Lifecast" by author Marc Opsal is a simply compelling page turner of a read from cover to cover. Original, entertaining, populated with memorable characters and more plot twists than a carnival roller coaster, "Lifecast" is a deftly crafted novel -- the kind from which blockbuster movies are made!`,
     url:`http://www.midwestbookreview.com/sbw/may_22.htm#generalfiction`,
