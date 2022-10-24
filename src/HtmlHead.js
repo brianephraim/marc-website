@@ -30,13 +30,17 @@ const HtmlHead = () => {
           type: 'text/javascript', 
           innerHTML: `
           function clearServiceWorkers() {
-            if(!(localStorage && localStorage.getItem && !localStorage.getItem('serviceworker-reset') && navigator && navigator.serviceWorker && navigator.getRegistrations)) {
+            console.log('asdfasdfasdfasdfads service 1');
+            if(!(localStorage && localStorage.getItem && !localStorage.getItem('serviceworker-reset') && navigator && navigator.serviceWorker && navigator.serviceWorker.getRegistrations)) {
               return
             } 
-            
+            console.log('asdfasdfasdfasdfads service 2');
             localStorage.setItem('serviceworker-reset',true);
+            console.log('asdfasdfasdfasdfads service 3');
             navigator.serviceWorker.getRegistrations().then(function(registrations) {
+              console.log('asdfasdfasdfasdfads service 4');
               for(let registration of registrations) {
+                console.log('asdfasdfasdfasdfads service 5');
                 registration.unregister()
                 document.location.reload()
               }
