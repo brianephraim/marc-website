@@ -138,7 +138,7 @@ const BookPromo = () => {
   return (
     <View style={styles.container} dataSet={{ media: styleIds.container }}>
       <View style={styles.leftSide} dataSet={{ media: styleIds.leftSide }}>
-        <Text style={basicStyles.h1}>Welcome To Lifecast</Text>
+        <Text style={basicStyles.h1}>Welcome To Lifecast!</Text>
         <View style={basicStyles.bodyTextWrap}>
           <Markdown style={markdownStyles}>
             {textContent}
